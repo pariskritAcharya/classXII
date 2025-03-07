@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>palindrome</title>
+</head>
+<body>
+    <script>
+        let string = prompt("enter a word");
+        if(string === string.split("").reverse().join("")){
+            document.write(string," is a palindrome");
+        }
+        else 
+        document.write(string," is not a palindrome ",string.split("").reverse().join(""))
+
+    </script>
+</body>
+</html>
