@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formValidation</title>
+    
+</head>
+<body>
+    <form action="./home.html" method="get" id="form" >
+        <input type="text" name="name" id="name" placeholder="enter your name" required>
+        <input type="password" name="password" id="password" placeholder="enter your password" required> 
+        <input type="submit" id="submit" onclick="return validate()">
+    </form>
+    <script src="validate.js"></script>
+</body>
+</html>
