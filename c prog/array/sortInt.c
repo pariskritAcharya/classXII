@@ -4,7 +4,7 @@
 
 void print(int a[], int n);
 void sort_function(int a[], int n);
-void sort_pointer(int *a,int n);
+void sort_pointer(int *a, int n);
 int main()
 {
     int n;
@@ -15,7 +15,7 @@ int main()
     // input array of numbers
     for (int i = 0; i < n; i++)
     {
-        switch (i+1)
+        switch (i + 1)
         {
         case 1:
             printf("enter 1st number");
@@ -27,7 +27,7 @@ int main()
             printf("enter 3rd number");
             break;
         default:
-            printf("\nenter %dth number:", i+1);
+            printf("\nenter %dth number:", i + 1);
             break;
         }
         scanf("%d", &a[i]);
@@ -36,22 +36,20 @@ int main()
     printf("initial numbers:");
     print(a, n);
 
-
-    //three copies of a 
+    // three copies of a
     int a_cpy1[n];
     memcpy(a_cpy1, a, n * sizeof(a[0]));
 
     int a_cpy2[n];
     memcpy(a_cpy2, a, sizeof(a));
 
-    int a_cpy3[n]; 
-    for (int i = 0; i < n; i++){
-        a_cpy3[i]=a[i];
+    int a_cpy3[n];
+    for (int i = 0; i < n; i++)
+    {
+        a_cpy3[i] = a[i];
     }
 
     // bubble sorting by loop
-
-
 
     for (int i = 0; i < n - 1; i++)
     {
@@ -77,14 +75,11 @@ int main()
     printf("\nrequired sorted form from pointer function is:");
     print(a_cpy3, n);
     printf("\n");
-    
+
     return 0;
 }
 
-
-
-
-//functions
+// functions
 void print(int a[], int n)
 {
 
@@ -94,9 +89,7 @@ void print(int a[], int n)
     }
 }
 
-
-
-//sorting with function
+// sorting with function
 void sort_function(int a[], int n)
 {
     for (int i = 0; i < n - 1; i++)
@@ -117,35 +110,30 @@ void sort_function(int a[], int n)
     print(a, n);
 }
 
-
-
-
-//sorting using pointer function
-void sort_pointer(int *a,int n){
+// sorting using pointer function
+void sort_pointer(int *a, int n)
+{
     for (int i = 0; i < n - 1; i++)
     {
         for (int j = i + 1; j < n; j++)
         {
-            if (*(a+i) > *(a+j))
+            if (*(a + i) > *(a + j))
             {
-                int temp = *(a+i);
-                *(a+i) = *(a+j);
-                *(a+j) = temp;
+                int temp = *(a + i);
+                *(a + i) = *(a + j);
+                *(a + j) = temp;
             }
         }
     }
-
-    
 }
-
 
 /*
 
 output:
-initial numbers:2 3 1 4 
-required sorted form from loop is:1 2 3 4 
-required descending from function is:4 3 2 1 
-required sorted form from pointer function is:1 2 3 4 
+initial numbers:2 3 1 4
+required sorted form from loop is:1 2 3 4
+required descending from function is:4 3 2 1
+required sorted form from pointer function is:1 2 3 4
 
 
 */

@@ -1,5 +1,5 @@
-#include<stdio.h>
-#include<string.h>
+#include <stdio.h>
+#include <string.h>
 
 // sort int using function pointer
 int *sort(int *a, int len)
@@ -94,3 +94,15 @@ int main()
 
     return 0;
 }
+
+/*
+output:
+
+sorted int
+ 1  2  3  4  5  6
+sorted char
+ a  b  c  d  e  f
+sorted string
+ ape  apple  ball  ball  cat  doll
+
+*/
