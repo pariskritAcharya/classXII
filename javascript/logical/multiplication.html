@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multiplication table</title>
+</head>
+<body>
+    <p>enter a number:</p><br>
+    <input type="number" name="number" id="number"><br>
+    <button onclick="table()">generate table</button>
+    <p id="table"></p>
+    <script>
+        function table(){
+            let num = document.getElementById("number").value;
+            let p= document.getElementById("table");
+            p.innerHTML=""
+            for(i=0;i<=10;i++){
+               p.innerHTML+=`${num} X ${i} = ${num*i}<br>`;
+            }
+        }
+    </script>
+</body>
+</html>
